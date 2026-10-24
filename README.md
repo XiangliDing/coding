@@ -6,8 +6,11 @@ This is Xiangli Ding's coding assignment
 - [General Info](#general-info)
 - [Features](#features)
 - [Technologies](#technologies)
+- [Data Sources](#data-sources)
 - [Setup](#setup)
 - [How to Use](#how-to-use)
+- [Requirements](#requirements)
+- [Data Storage](#data-storage)
 
 ## General Info
 
@@ -47,6 +50,13 @@ Project is created with:
 - Tkinter (Python GUI library)
 - ttk (Tkinter themed widgets)
 
+## Data Sources
+
+- Food calorie values (kcal per 100 g): [Australian Food Composition Database (AFCD), Release 3.0 — Food Standards Australia New Zealand](https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd/search)
+- Exercise MET values: [2024 Adult Compendium of Physical Activities](https://pacompendium.com/adult-compendium/)
+
+Food energy values were converted from kJ to kcal using: kcal = kJ / 4.184.
+
 ## Setup
 
 To run this project locally:
@@ -57,10 +67,8 @@ To run this project locally:
 4. Run the main Python file using the terminal:
 
 ```bash
-python3 main.py
+python3 app.py
 ```
-
-Replace `main.py` with the actual name of your Python file.
 
 ## How to Use
 
@@ -69,6 +77,20 @@ Replace `main.py` with the actual name of your Python file.
 3. Select the Exercise Calculator tab to calculate calories burned.
 4. Save the calculated results.
 5. Open the Daily Records tab to view your records.
+
+## Requirements
+
+- Python 3 with Tkinter support.
+- No third-party Python packages are required.
+- To check whether Tkinter is available, run `python3 -m tkinter`.
+  A small test window should appear.
+
+## Data Storage
+
+- Records are saved locally in `daily_records.csv`, in the same folder as `app.py`.
+- This file is created automatically when the first record is saved.
+- Each record contains the date, record type, item, details and calories (kcal).
+- Saved records can be viewed again when the application is reopened.
 
 ## Notes
 
